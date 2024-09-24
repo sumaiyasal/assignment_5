@@ -31,6 +31,23 @@ function addDiv(amount,location,time,transiction){
     `
       transiction.appendChild(newElement);  
 }
+function active(id1,id2){
+    const donation=getid('donation');
+    const history=getid('history');
+    const donate=getid('donate');
+    const transiction=getid('transiction');
+    donation.classList.remove('bg-primary');
+    history.classList.remove('bg-primary');
+    donate.classList.add('hidden');
+    transiction.classList.add('hidden');
+    id1=getid(id1);
+    id2=getid(id2);
+    
+    id2.classList.add("bg-primary");
+    id1.classList.remove("hidden");
+
+}
+
 window.addEventListener('scroll', function() {
     const header = getid('header');
     const headerDiv=getid('headerDiv');
@@ -51,7 +68,7 @@ document.getElementById('noakhaliBtn').addEventListener('click',function(){
       const location1=getidtext('location1');
       const transiction=getid('transiction');
       const totalamount=getidtext('namount');
-      if(isNaN(damount) || damount<0||damount>totaltk ||damount.length<=0){
+      if(isNaN(damount) || parseInt(damount)<0 ||parseInt(damount)>parseInt(totaltk) ||damount.length<=0){
         alert('invalid donate amount');
         clearinput("noadonate");
         return;
@@ -71,7 +88,7 @@ document.getElementById('fenidonation').addEventListener('click',function(){
     const location2=getidtext('location2');
     const transiction=getid('transiction');
     const totalamount=getidtext('famount');
-    if(isNaN(damount) || damount<0||damount>totaltk ||damount.length<=0){
+    if(isNaN(damount) || parseInt(damount)<0 ||parseInt(damount)>parseInt(totaltk) ||damount.length<=0){
       alert('invalid donate amount');
       clearinput("fdonate");
       return;
@@ -92,7 +109,7 @@ document.getElementById('quotabtn').addEventListener('click',function(){
     const location3=getidtext('location3');
     const transiction=getid('transiction');
     const totalamount=getidtext('quotaamount');
-    if(isNaN(damount) || damount<0||damount>totaltk ||damount.length<=0){
+    if(isNaN(damount) || parseInt(damount)<0 ||parseInt(damount)>parseInt(totaltk) ||damount.length<=0){
       alert('invalid donate amount');
       clearinput("quotadonate");
       return;
@@ -107,26 +124,10 @@ document.getElementById('quotabtn').addEventListener('click',function(){
 });
 
 document.getElementById('donation').addEventListener('click',function(){
-    active('donate','donation','bg-primary');
+    active('donate','donation');
 
 })
 document.getElementById('history').addEventListener('click',function(event){
-    active('transiction','history','bg-white');
+    active('transiction','history');
 
 })
-function active(id1,id2,bg){
-    const donation=getid('donation');
-    const history=getid('history');
-    const donate=getid('donate');
-    const transiction=getid('transiction');
-    donation.classList.remove('bg-primary',bg);
-    history.classList.remove('bg-primary',bg);
-    donate.classList.add('hidden');
-    transiction.classList.add('hidden');
-    id1=getid(id1);
-    id2=getid(id2);
-
-    id2.classList.add("bg-primary");
-    id1.classList.remove("hidden");
-
-}
