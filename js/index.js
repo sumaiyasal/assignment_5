@@ -22,7 +22,7 @@ function decresemoney(id,totaltk,damount){
 function addDiv(amount,location,time,transiction){
     const newElement=document.createElement('div');
       newElement.innerHTML=`
-      <div class="border-2 rounded-lg p-6 space-y-6 mb-4">
+      <div class="border-2 rounded-lg p-6 space-y-6 mb-4 lg:mx-0 mx-4">
        <p>
        ${amount} Taka is Donated For ${location}
        </p>
