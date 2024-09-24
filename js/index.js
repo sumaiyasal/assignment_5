@@ -43,6 +43,7 @@ window.addEventListener('scroll', function() {
     }
     
 });
+
 //noakhali flood donation button 
 document.getElementById('noakhaliBtn').addEventListener('click',function(){
       const damount=getvalue('noadonate');

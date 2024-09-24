@@ -21,12 +21,12 @@
        </script>
        <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
-    <header class="fixed top-0 right-0 left-0" id="header">
+<body class=" lg:h-full">
+    <header class="fixed top-0 right-0 left-0 z-20" id="header">
         <div class="bg-[#F9F7F3] pb-8" id="headerDiv">
             <div class="navbar  container mx-auto">
                 <div class="navbar-start">
-                  <a class="btn btn-ghost text-xl bg-primary font-semibold" href="index.html">Home</a>
+                  <a class="btn btn-ghost text-xl bg-primary font-semibold" href="index.html" id="home">Home</a>
                 </div>
                 <div class="navbar-center  lg:flex gap-4 items-center" >
                  <img src="assets/logo.png" alt="">
@@ -42,32 +42,64 @@
         </div>
 
     </header>
-    <main class="container mx-auto  mt-56">
+    <main class="container mx-auto  mt-36 min-h-screen">
         <section>
             <p>Important FAQ</p>
-            <div class="collapse collapse-arrow bg-base-200">
-                <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-                <div class="collapse-content">
-                  <p>hello</p>
-                </div>
-              </div>
-              <div class="collapse collapse-arrow bg-base-200">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-                <div class="collapse-content">
-                  <p>hello</p>
-                </div>
-              </div>
-              <div class="collapse collapse-arrow bg-base-200">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-                <div class="collapse-content">
-                  <p>hello</p>
-                </div>
-              </div>
+            <div class="mt-8">
+                <div class="collapse collapse-arrow border-2 rounded-md">
+                    <input type="checkbox" name="my-accordion-2"  />
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
+                    <div class="collapse-content ">
+                      <p class="text-lg font-normal">"DOM" stands for Document Object Model. It's a programming interface for web documents that represents the structure of a document as a tree of objects. This allows programming languages, like JavaScript, to manipulate the content, structure, and style of a web page dynamically.</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-arrow border-2 rounded-md">
+                    <input type="checkbox" name="my-accordion-2"  />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content ">
+                      <p class="text-lg font-normal">An element can be selected from the DOM using JavaScript. Methods are used  like getElementById() to access an element by its unique ID, getElementsByClassName() to find elements with a specific class name, or querySelector() to select an element based on a CSS selector, which allows for more complex targeting based on attributes, tag names, and class combinations. 
+
+                      </p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-arrow border-2 rounded-md">
+                    <input type="checkbox" name="my-accordion-2"  />
+                    <div class="collapse-title text-xl font-medium">What is the event delegation in the context of the DOM,and why is it useful?</div>
+                    <div class="collapse-content ">
+                      <p class="text-lg font-normal">Event delegation is based event-bubbling method. It is an event-handling pattern that allows us to handle events at a higher level in the DOM tree other than the level where the event was first received.
+                    This is useful because it significantly reduces the number of event listeners needed, improving performance especially when dealing with large or dynamically generated lists of elements. 
+
+                      </p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-arrow border-2 rounded-md">
+                    <input type="checkbox" name="my-accordion-2"  />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content ">
+                      <p class="text-lg font-normal">Using Dom element's attribute can be manipulated by following ways:
+                      <ul class="text-lg font-normal list-disc pl-5">
+                        <li>Getting an Attribute: Use the getAttribute method to retrieve the value of a specific attribute.</li>
+                        <li>Setting an Attribute: Use the setAttribute method to change an attribute's value.</li>
+                        <li>Removing an Attribute: Use the removeAttribute method to delete an attribute.</li>
+                      </ul><br>
+                      <p class="text-lg font-normal">Using Dom styles can be manipulated by following ways:
+                        <ul class="text-lg font-normal list-disc pl-5">
+                          <li>Changing a Single Style Property: You can directly access the style property to change a specific CSS style.</li>
+                          <li>Changing Multiple Style Properties: You can also set multiple styles at once using a loop or by assigning a CSS string.</li>
+                          <li>Adding or Removing Classes: You can add or remove CSS classes using the classList property.</li>
+                        </ul>
+
+
+                    </p>
+                    </div>
+                  </div>
+            </div>
+           
         </section>
      
     </main>
+    <footer class="bg-secondary  p-10 mt-2 ">   
+    </footer>
+
 </body>
 </html>
